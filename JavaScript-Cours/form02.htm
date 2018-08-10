@@ -1,0 +1,43 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<title>Bouton radio</title>
+<script language="JavaScript">
+function choisir()
+{
+	if (document.f3.choix[0].checked)
+	{
+		alert("Il y a : " + document.f3.choix[0].value+" solutions"); 
+	}
+	else if (document.f3.choix[1].checked)
+	{
+		alert("Il y a :" + document.f3.choix[1].value+" solution"); 
+	}
+	else if (document.f3.choix[2].checked)
+	{	
+		alert("Il y a : " + document.f3.choix[2].value+" solution"); 
+	}
+	else
+	{
+		alert("Veuillez faire un choix.");
+	}
+}
+</script>
+</head>
+
+<body>
+
+<h3>Le signe du descriminant d'une équation de second degré</h3>
+<form name="f3">
+	<input name="choix" type="radio" value="2">Strictement positif<br>
+	<input name="choix" type="radio" value="1">Nul<br>
+	<input name="choix" type="radio" value="0">Strictement Négatif<br>
+	<input name="but" onclick="choisir()" type="button" value="Le nombre des solutions réelles?">
+</form>
+
+</body>
+
+</html>

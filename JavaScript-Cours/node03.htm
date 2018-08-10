@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<title>Objets JavaScript</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<h2>Objets JavaScript</h2>
+<h3>Catégories</h3>
+<p>Les objets JavaScript sont classés en deux catégories :</p>
+<ul>
+	<li>Objets d'interface : window, document,…</li>
+	<li>Objets Prédéfinis : String, Math, Date,…</li>
+</ul>
+<h3>Hiérarchie des objets visuels</h3>
+<p>La figure suivante présente la hiérarchie des objets de l'interface.</p>
+<p><img border="0" src="images/node031.jpg"></p>
+<p>La fenêtre est représentée par l'objet : <strong>window</strong>. </p>
+<p>Le contenu de la page Web est accessible via l'objet : <strong>document</strong>. </p>
+<p>Le document peut contenir plusieurs autres éléments dont le formulaire nommé 
+ici : <strong>formulaire</strong>. </p>
+<p>Les éléments du formulaires sont accessibles via leurs noms : <strong>nom</strong>, 
+<strong>prenom</strong>, 
+<strong>age</strong>…</p>
+<p>Il est possible d'accéder aux objets en JavaScript à travers leurs <strong>propriétés</strong> 
+et leurs <strong>méthodes</strong>. </p>
+<p>Toute <strong>variable</strong> membre d'un <strong>objet</strong> est appelée
+<strong>propriété</strong> : état d'un objet. </p>
+<p>Toute <strong>fonction</strong> membre d'un <strong>objet</strong> est appelée 
+<strong>méthode</strong> : action relative à un 
+objet.</p>
+
+<h3>Exemple :</h3>
+<p>Pour affecter une valeur dans le contrôle nom on pourra écrire : </p>
+<p class="code">window.document.formulaire.nom.value = &quot;MANI Mohamed Anis&quot;; <br>
+document.formulaire.nom.value = &quot;MANI Mohamed Anis&quot;; // correcte sans window <br>
+formulaire.nom.value = &quot;MANI Mohamed Anis&quot;; // correcte sans window.document <br>
+nom.value = &quot;MANI Mohamed Anis&quot;; // incorrecte </p>
+<h3>Notion d'objet, propriété et méthode</h3>
+<p>
+<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="animation" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="908" height="662">
+	<param name="movie" value="images/JavaScript.swf">
+	<param name="quality" value="High">
+	<embed src="images/JavaScript.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="animation" quality="High" width="908" height="662"></object>
+</p>
+
+</body>
+
+</html>

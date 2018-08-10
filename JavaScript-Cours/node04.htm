@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<title>Les variables</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<h2>Les variables</h2>
+<p>Il est possible de déclarer une variable en JavaScript de deux façons :</p>
+<ul>
+	<li>Explicitement : en utilisant le mot clé var suivi par le nom de la variable. 
+	</li>
+	<li>Implicitement : en omettant le mot clé var tout en affectant une valeur au nom 
+de la variable.  
+	</li>
+</ul>
+<h3>Délaration Explicite</h3>
+<p>En utilisant le mot clé <strong>var</strong>.</p>
+<p class="code">var a, b, c = 3; <br>
+a = &quot;Bonjour&quot;; <br>
+b = 15 * c; // b = 45</p>
+<h3>Délaration Implicite</h3>
+<p>En affectant directement un valeur à un nom de variable.</p>
+<p class="code">c = 3; <br>
+a = &quot;Bonjour&quot;; <br>
+b = 15 * c; // b = 45</p>
+<h3>JavaScript est sensible à la casse</h3>
+<p class="remarque"><b>Remarque : </b>JavaScript est sensible à la casse. 
+</p>
+<p>L'exemple suivant démontre que JavaScript différencie la variable a (minuscule) 
+de la variable A (majuscule). </p>
+<p class="code">A = 5; a = 25; <br>
+document.write(&quot;a= &quot; + a + &quot; - A=&quot; + A); </p>
+<p class="remarque"><strong>Remarque : <br></strong>Les variables déclarées au sein d'une fonction avec le mot clé var sont 
+considérées comme étant des variables locales. <br>Les variables déclarées sans le 
+mot clé var sont des variables globales quelque soit leurs emplacements. </p>
+<h3>Types de variables</h3>
+<p>JavaScript supporte quatre types de variables prédéfinies :</p>
+<ul>
+	<li>Les nombres <b>Number</b> (entiers/réels).</li>
+	<li>Les booléens (true ou false).</li>
+	<li>Les chaînes de caractères <b>String</b> (&quot;Ahmed&quot; ou 'Ahmed').</li>
+	<li>Les types <strong>Object</strong> (Objet).</li>
+</ul>
+<p>Les variables vides contiennent la valeur : null.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Structures Conditionnelles</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<h2>Structures Conditionnelles</h2>
+<h3>Structure Si … Alors …Sinon</h3>
+<table border="1" width="100%" id="table1">
+	<tr>
+		<td align="center">&nbsp;</td>
+		<td align="center"><b>Structure Algorithmique</b></td>
+		<td align="center"><b>Equivalent en JavaScript</b></td>
+	</tr>
+	<tr>
+		<td align="center"><b>Forme Simple</b></td>
+		<td>Si condition Alors <br>
+&nbsp;&nbsp;&nbsp;&nbsp; (* traitements *) <br>
+		Fin Si</td>
+		<td>if (condition) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; // Traitements <br>
+		}</td>
+	</tr>
+	<tr>
+		<td align="center"><b>Forme Complète</b></td>
+		<td>Si condition Alors <br>
+&nbsp;&nbsp;&nbsp;&nbsp; (* traitements *) (* si condition = vrai *) <br>
+		Sinon <br>
+&nbsp;&nbsp;&nbsp;&nbsp; (* traitements *) (* si condition = faux *) <br>
+		Fin Si</td>
+		<td>if (condition) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Traitements // si (condition == true) <br>
+		} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Traitements // si (condition == false) <br>
+		}</td>
+	</tr>
+	<tr>
+		<td align="center"><b>Forme Généralisée</b></td>
+		<td>Si condition1 Alors <br>
+&nbsp;&nbsp;&nbsp;&nbsp; (* traitements 1 *) <br>
+		Sinon Si condition2 Alors<br>
+&nbsp;&nbsp;&nbsp;&nbsp; (* traitements 2 *) <br>
+		Sinon <br>
+&nbsp;&nbsp;&nbsp;&nbsp; (* traitements 3 *) <br>
+		Fin Si</td>
+		<td>if (condition1) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; // Traitements1 <br>
+		} else if (condition2) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; // Traitements 2 <br>
+		} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; // Traitements 3 <br>
+		}</td>
+	</tr>
+</table>
+<h3>Structure Selon … Faire </h3>
+<p class="code">switch (variable) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; case v1 : <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // traitements si 
+(variable == v1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; case v3 : case v4 : <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // traitements si 
+(variable == v3) ou (variable == v4) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; default : <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // traitements sinon <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; // facultative à 
+la fin <br>
+}</p>
+
+</body>
+
+</html>

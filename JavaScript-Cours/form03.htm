@@ -1,0 +1,39 @@
+﻿<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="styles.css" rel="stylesheet" type="text/css">
+<title>Checkbox</title>
+<script language="JavaScript">
+function reponse()
+{
+	if (!document.f4.check1.checked &&
+		document.f4.check2.checked &&
+		!document.f4.check3.checked &&
+		document.f4.check4.checked &&
+		document.f4.check5.checked)
+	{ 
+		alert("C'est la bonne réponse! ")
+	}
+	else
+	{
+		alert("Désolé, continuez à chercher.")}
+	}
+</script>
+</head>
+
+<body>
+
+<h3>Quels sont les nombres premiers parmi ces cinq entiers:</h3>
+<form name="f4">
+	<input name="check1" type="checkbox" value="1">209*<br>
+	<input name="check2" type="checkbox" value="2">223 <br>
+	<input name="check3" type="checkbox" value="3">517*<br>
+	<input name="check4" type="checkbox" value="4">647<br>
+	<input name="check5" type="checkbox" value="5">751<br>
+	<input name="but" onclick="reponse()" type="button" value="Réponse">
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title>zone de saisie</title>
+<script language="JavaScript">
+function afficher()
+{
+	var n =document.f2.input.value;
+	document.f2.output.value = n*n;
+}
+</script>
+</head>
+<body>
+
+<h2>Carré d'un nombre</h2>
+<form name="f2">
+	L'entier donné : <input name="input" type="text" value=""> <br>
+	<input name="bouton" onclick="afficher()" type="button" value="Calculer le carré"><br>
+	L'entier résultat : <input name="output" type="text" value="">
+</form>
+
+</body>
+
+</html>

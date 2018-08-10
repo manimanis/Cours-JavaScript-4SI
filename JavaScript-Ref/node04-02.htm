@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>indexOf(), lastIndexOf()</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<h2>String</h2>
+<h3>Fonction indeOf(...), lastIndexOf(...)</h3>
+<h4>Syntaxe</h4>
+<p class="code">chaine.indexOf(car)<br>
+chaine.indexOf(car, deb)<br>
+chaine.indexOf(chaine)<br>
+chaine.indexOf(chaine, deb)<br>
+<br>
+chaine.lastIndexOf(car)<br>
+chaine.lastIndexOf(car, deb)<br>
+chaine.lastIndexOf(chaine)<br>
+chaine.lasIndexOf(chaine, deb)</p>
+<h4>Exemple</h4>
+<p class="code">&lt;script type=&quot;text/javascript&quot;&gt;<br>
+<br>
+var str=&quot;Hello world!&quot;;<br>
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01234567890<br>
+document.write(&quot;str.indexOf('l') : &quot; + str.indexOf(&quot;l&quot;) + &quot;&lt;br /&gt;&quot;);<br>
+document.write(&quot;str.indexOf('l', 5) : &quot; + str.indexOf(&quot;l&quot;, 5) + &quot;&lt;br /&gt;&quot;);<br>
+document.write(&quot;str.indexOf('WORLD') : &quot; + str.indexOf(&quot;WORLD&quot;) + &quot;&lt;br /&gt;&quot;);<br>
+document.write(&quot;str.indexOf('world') : &quot; + str.indexOf(&quot;world&quot;) + &quot;&lt;br /&gt;&lt;br 
+/&gt;&quot;);<br>
+<br>
+document.write(&quot;str.lastIndexOf('l') : &quot; + str.lastIndexOf(&quot;l&quot;) + &quot;&lt;br /&gt;&quot;);<br>
+document.write(&quot;str.lastIndexOf('l', 7) : &quot; + str.lastIndexOf(&quot;l&quot;, 7) + &quot;&lt;br 
+/&gt;&quot;);<br>
+<br>
+&lt;/script&gt; </p>
+<h4>Résultat</h4>
+
+<script type="text/javascript">
+
+var str="Hello world!";
+//       01234567890
+document.write("str.indexOf('l') : " + str.indexOf("l") + "<br />");
+document.write("str.indexOf('l', 5) : " + str.indexOf("l", 5) + "<br />");
+document.write("str.indexOf('WORLD') : " + str.indexOf("WORLD") + "<br />");
+document.write("str.indexOf('world') : " + str.indexOf("world") + "<br /><br />");
+
+document.write("str.lastIndexOf('l') : " + str.lastIndexOf("l") + "<br />");
+document.write("str.lastIndexOf('l', 7) : " + str.lastIndexOf("l", 7) + "<br />");
+
+</script>
+
+</body>
+
+</html>

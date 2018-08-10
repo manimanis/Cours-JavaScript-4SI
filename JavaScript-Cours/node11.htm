@@ -1,0 +1,305 @@
+﻿<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Les fonctions</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="font-family: 'Book Antiqua'">
+
+<h2>Formulaires</h2>
+<h3>Champ de texte et Zone de Texte</h3>
+<form name="f1">
+	<p>
+		<strong>Nom &amp; Prénom: </strong>
+		<input name="nom" type="text"> 
+		<input onClick="alert(document.f1.nom.value)" type="button" value="Lire">
+		<input onClick="document.f1.nom.value = 'Abdou'" type="button" value="Valeur par défaut">
+	</p>
+</form>
+
+<p>Pour lire le contenu d'un champ de texte <strong>nom</strong> on écrit, par 
+exemple :</p>
+<p class="code">var nom;<br>nom = document.f1.nom.value;</p>
+<p>Pour affecter une valeur à un champ de texte nom on écrit, apr exemple :</p>
+<p class="code">document.f1.nom.value = 'Abdou';</p>
+<p>Afficher l'exemple : <a href="form01.htm" target="_blank">Carré d'un nombre</a></p>
+
+<h3>Boutons Radio</h3>
+
+<p>Pour tester si un bouton radio est coché ou non utiliser la propriété&nbsp; :<strong>
+checked</strong></p>
+<p class="code">if (document.f3.civ[0].checked) {<br>&nbsp;&nbsp;&nbsp; // Le 
+premier bouton radio (indice <strong>0</strong>) nommé <strong>civ</strong> du 
+formulaire nommé <strong>f2</strong> est coché<br>&nbsp;&nbsp;&nbsp; 
+alert('Bouton radio 1 coché.');<br>}</p>
+<script>
+function test01() 
+{
+	if (document.f3.civ[0].checked)
+	{
+		alert('Bouton radio 1 coché.');
+	}
+	else if (document.f3.civ[1].checked)
+	{
+		alert('Bouton radio 2 coché.');
+	}
+	else
+	{
+		alert('Aucun bouton radio coché');
+	}
+}
+
+function test02() 
+{
+	alert('Il y\'a exactement ' + document.f3.civ.length + ' civilités possibles.');
+}
+
+function test03() 
+{
+	var i, v = '';
+	for (i = 0 ; i < document.f3.civ.length ; i++) 
+	{
+		if (document.f3.civ[i].checked) v = document.f3.civ[i].value;
+	}
+	alert('La valeur du bouton radio coché est : ' + v);
+}
+
+</script>
+
+<p>Pour déterminer le nombre de boutons radios ayant un même nom utiliser la 
+propriété : <strong>length</strong></p>
+<p class="code">alert(document.f3.civ.length); // renvoie le nombre de boutons radio</p>
+
+<form name="f3">
+
+<p>Pour déterminer la valeur d'un bouton radio utiliser la propriété : <strong>
+value</strong></p>
+<p class="code">alert(document.f3.civ[0].value); // renvoie la valeur associée 
+au premier bouton radio</p>
+
+<h4>
+	<strong>Test </strong>boutons radios</h4>
+	<p>
+		<strong>Civilité: </strong>
+		<input name="civ" type="radio" value="C"> Célibataire  
+		<input name="civ" type="radio" value="M"> Marié(e) 
+	</p>
+	<p><input onClick="test01()" type="button" value="propriété checked"></p>
+	<p><input onClick="test02()" type="button" value="propriété length"></p>
+	<p><input onClick="test03()" type="button" value="propriété value"></p>
+</form>
+
+<p>Afficher l'exemple : <a href="form02.htm" target="_blank">Nombre de solutions réelles</a></p>
+
+<h3>Cases à cocher</h3>
+<p>Pour tester si une case à cocher est cochée utiliser la propriété : <strong>
+checked</strong></p>
+<p class="code">if (document.f4.lang1.checked) {<br>&nbsp;&nbsp;&nbsp; 
+alert("L'Arabe est la langue du Coran.");<br>}</p>
+
+<script type="text/javascript">
+function test11()
+{
+	if (document.f4.lang1.checked) {
+		alert("L'Arabe est la langue du Coran.");
+	}
+	
+	if (document.f4.lang2.checked) {
+		alert("Le français est la langue de Molière.");
+	}
+	
+	if (document.f4.lang3.checked) {
+		alert("L'Anglais est la langue de Shekspear.");
+	}
+	
+	if (document.f4.lang4.checked) {
+		alert("L'Espagnol est la langue de l'Amérique Latine.");
+	}
+}
+
+function test12()
+{
+	var c = 0, 
+		l = '';
+	
+	if (document.f4.lang1.checked) {
+		c++;
+		l += document.f4.lang1.value;
+	}
+	
+	if (document.f4.lang2.checked) {
+		c++;
+		if (l != '') l += ', ';
+		l += document.f4.lang2.value;
+	}
+	
+	if (document.f4.lang3.checked) {
+		c++;
+		if (l != '') l += ', ';
+		l += document.f4.lang3.value;
+	}
+	
+	if (document.f4.lang4.checked) {
+		c++;
+		if (l != '') l += ', ';
+		l += document.f4.lang2.value;
+	}
+
+	if (c == 0) 
+	{
+		alert("Vous préférez peut-être la langue MORSE");
+	} 
+	else if (c == 1) 
+	{
+		alert("Vous une seule langue : " + l);
+	} 
+	else
+	{
+		alert("Vous préférez " + c + " langues : " + l);
+	}
+}
+</script>
+
+<p>Pour déterminer la valeur associée à une case à cocher utiliser la propriété :
+<strong>value</strong></p>
+<p class="code">if (document.f4.lang1.checked) {<br>&nbsp;&nbsp;&nbsp; 
+alert(document.f4.lang1.value);<br>}</p>
+
+<script type="text/javascript">
+function test11()
+{
+	if (document.f4.lang1.checked) {
+		alert("L'Arabe est la langue du Coran.");
+	}
+	
+	if (document.f4.lang2.checked) {
+		alert("Le français est la langue de Molière.");
+	}
+	
+	if (document.f4.lang3.checked) {
+		alert("L'Anglais est la langue de Shekspear.");
+	}
+	
+	if (document.f4.lang4.checked) {
+		alert("L'Espagnol est la langue de l'Amérique Latine.");
+	}
+}
+
+function test12()
+{
+	var c = 0, 
+		l = '';
+	
+	if (document.f4.lang1.checked) {
+		c++;
+		l += document.f4.lang1.value;
+	}
+	
+	if (document.f4.lang2.checked) {
+		c++;
+		if (l != '') l += ', ';
+		l += document.f4.lang2.value;
+	}
+	
+	if (document.f4.lang3.checked) {
+		c++;
+		if (l != '') l += ', ';
+		l += document.f4.lang3.value;
+	}
+	
+	if (document.f4.lang4.checked) {
+		c++;
+		if (l != '') l += ', ';
+		l += document.f4.lang2.value;
+	}
+
+	if (c == 0) 
+	{
+		alert("Vous préférez peut-être la langue MORSE");
+	} 
+	else if (c == 1) 
+	{
+		alert("Vous une seule langue : " + l);
+	} 
+	else
+	{
+		alert("Vous préférez " + c + " langues : " + l);
+	}
+}
+</script>
+
+<h4>Test cases à cocher</h4>
+
+<form name="f4">
+	<p>
+		<strong>Votre langue préférée :</strong>
+		<input name="lang1" type="checkbox" value="Arabe"> Arabe
+		<input name="lang2" type="checkbox" value="Français"> Français
+		<input name="lang3" type="checkbox" value="Anglais"> Anglais
+		<input name="lang4" type="checkbox" value="Espagnol"> Espagnol
+	</p>
+	<p><input onClick="test11()" type="button" value="propriété checked"></p>
+	<p><input onClick="test12()" type="button" value="propriété value"></p>
+</form>
+<p>Afficher l'exemple : <a href="form03.htm" target="_blank">Nombres premiers</a></p>
+<h3>Liste de Choix</h3>
+<p>Pour déterminer l'indice de l'élément sélectionné utiliser : <strong>
+selectedIndex</strong></p>
+<p class="code">alert("Vous avez sélectionné l'option numéro : " + 
+document.f5.cl.selectedIndex);</p>
+
+<p>Pour déterminer la valeur associé à un élément d'une liste de choix utiliser :
+<strong>value</strong></p>
+<p class="code">valeur = document.f5.cl.options[index].value; // index : indice 
+de l'élément</p>
+<p>Pour déterminer le texte d'une option dans une liste de choix utiliser :
+<strong>text</strong></p>
+<p class="code">texte = document.f5.cl.options[index].text; // index : indice de 
+l'élément</p>
+<script type="text/javascript">
+function test21()
+{
+	alert("Vous avez sélectionné l'option numéro : " + document.f5.cl.selectedIndex);
+}
+
+function test22()
+{
+	var index = document.f5.cl.selectedIndex,
+		valeur = document.f5.cl.options[index].value;
+	alert("L'option sélectionnée possède la valeur : " + valeur);
+}
+
+function test23()
+{
+	var index = document.f5.cl.selectedIndex,
+		texte = document.f5.cl.options[index].text;
+	alert("Le texte de l'option sélectionnée est : " + texte);
+}
+</script>
+
+<h4>Test liste de choix</h4>
+
+<form name="f5">
+	<p>
+		<strong>Votre classe:</strong>
+		<select name="cl">
+			<option>Sélectionner une classe</option>
+			<option value="4SI">4ème Sciences de l'Informatique</option>
+			<option value="4T">4ème Techniques</option>
+			<option value="4L">4ème Lettres</option>
+			<option value="4S">4ème Sciences</option>
+			<option value="4ECO">4ème Economie et gestion</option>
+			<option value="4M">4ème Mathémtiques</option>
+			<option value="4P">4ème Sport</option>
+		</select>
+	</p>
+	<p><input onClick="test21()" type="button" value="propriété selectedIndex"></p>
+	<p><input onClick="test22()" type="button" value="propriété value"></p>
+	<p><input onClick="test23()" type="button" value="propriété text"></p>
+<p>Afficher l'exemple : <a href="form04.htm" target="_blank">Carnet d'adresses</a></p>
+</form>
+</body>
+
+</html>

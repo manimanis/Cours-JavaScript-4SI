@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<title>Structures Itératives</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<h2>Structures Itératives</h2>
+<h3>Structure Pour … Faire</h3>
+<table border="1" width="100%" id="table1">
+	<tr>
+		<td align="center" width="50%"><b>Equivalent Algorithmique</b></td>
+		<td align="center" width="50%"><b>Structure JavaScript disponible</b></td>
+	</tr>
+	<tr>
+		<td width="50%">initialisation; <br>
+		Tant Que (condition) Faire <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* Traitements *) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; progression; <br>
+		Fin Tant Que</td>
+		<td width="50%">for (initialisation ; condition ; progression) { <br>
+		<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* Traitements *) <br>
+		<br>
+		}</td>
+	</tr>
+</table>
+<p>Supposons que v1 &lt;= v2</p>
+<table border="1" width="100%" id="table2">
+	<tr>
+		<td align="center" width="50%"><b>Structure Algorithmique</b></td>
+		<td align="center" width="50%"><b>Equivalent en JavaScript</b></td>
+	</tr>
+	<tr>
+		<td>Pour i de v1 à v2 Faire <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* traitements *) <br>
+		Fin Si</td>
+		<td>for (i = v1 ; i &lt;= v2 ; i++) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Traitements <br>
+		}</td>
+	</tr>
+	<tr>
+		<td>Pour i de v2 à v1 Faire <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* traitements *) <br>
+		Fin Si</td>
+		<td>for (i = v2 ; i &gt;= v1 ; i--) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Traitements <br>
+		}</td>
+	</tr>
+</table>
+<h3>Structure Tant Que … Faire</h3>
+<table border="1" width="100%" id="table3">
+	<tr>
+		<td align="center" width="50%"><b>Equivalent Algorithmique</b></td>
+		<td align="center" width="50%"><b>Structure JavaScript disponible</b></td>
+	</tr>
+	<tr>
+		<td>Tant Que (condition) Faire <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* Traitements *) <br>
+		Fin Tant Que</td>
+		<td>while (condition) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* Traitements *) <br>
+		}</td>
+	</tr>
+	<tr>
+		<td>Faire<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* Traitements *)<br>
+		Tant Que (condition)</td>
+		<td>do { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // traitements <br>
+		} while (condition);</td>
+	</tr>
+</table>
+<h3>Structure Répéter … Jusqu'à</h3>
+<p>Il n'existe pas d'équivalent pour la structure Répéter … Jusqu'à en 
+JavaScript.<br>
+Il est, cependant, possible de simuler la structure Répéter … Jusqu'à de la 
+manière suivante :</p>
+<table border="1" width="100%" id="table4">
+	<tr>
+		<td align="center" width="50%"><b>Equivalent Algorithmique</b></td>
+		<td align="center" width="50%"><b>Structure JavaScript disponible</b></td>
+	</tr>
+	<tr>
+		<td>Répéter <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* traitements *) <br>
+		Jusqu'à condition</td>
+		<td>do { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // traitements <br>
+		} while (!condition);</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

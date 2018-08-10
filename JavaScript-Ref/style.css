@@ -1,0 +1,56 @@
+﻿body {
+	font-family: Book Antiqua;
+}
+.remarque {
+	border: 3px solid #800000;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background-color: #FFD7D7;
+}
+.code {
+	font-family: Courier New;
+	font-size: 10pt;
+	border: 2px solid #808080;
+	padding: 4px;
+	background-color: #E0E0E0;
+}
+h2 {
+	text-align: center;
+	color: #CC0000;
+}
+p {
+	margin-top: 3;
+	margin-bottom: 3;
+}
+#menu a {
+	border: thin solid #003366;
+	border-radius: 8px;
+	padding: 4px;
+	color: #000099;
+	text-decoration: none;
+	background-color: #99CCFF;
+	font-weight: bold;
+	display: inline-block;
+	width: 90%;
+}
+#menu a:hover {
+	background-color: #003366;
+	color: #99CCFF;
+}
+h3 {
+	color: #FF0066;
+}
+table {
+	border-collapse: collapse;
+}
+td, th {
+	padding: 5px;
+}
+td a {
+}
+img {
+	border: thin solid #C0C0C0;
+	padding: 5px;
+}

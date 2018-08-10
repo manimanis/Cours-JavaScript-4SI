@@ -1,0 +1,57 @@
+﻿<html>
+
+<head>
+<title>onFocus/onChange/onBlur/onKeyup</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<script language="javascript">
+function majuscule()
+{
+	var np, mpmaj;
+	
+	np = document.f.np.value;
+	npmaj = np.toUpperCase();
+	document.f.np.value = npmaj;
+}
+
+function affiche(msg)
+{ 
+	document.f.status.value = msg; 
+}
+
+function longueur()
+{
+	var np;
+	
+	np = document.f.np.value;
+	document.f.nc.value = np.length;
+}
+</script>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<form name="f">
+	<h2>Evènement onChange/onFocus/onBlur/onKeyUp</h2>
+	<p>Nom &amp; Prénom :
+	<input type="text" name="np" onblur="affiche('...')" onchange="majuscule()" onfocus="affiche('Saisissez votre nom et prénom')" onkeyup="longueur()">
+	</p>
+	<p>Nombre de caractères tapés :
+	<input name="nc" readonly="readonly" size="3" type="text" value="0"></p>
+	<p class="remarque">Etat
+	<input name="status" readonly="readonly" size="80" type="text"></p>
+</form>
+<h3>Fonctionnement </h3>
+<p>Lorsque le champ de texte <strong>np</strong> prend le focus (<strong>onFocus</strong>) 
+le texte <strong>Saisissez votre nom et prénom</strong> s'affiche dans le champ
+<strong>status</strong>.</p>
+<p>Lorsque le champ de texte <strong>np</strong> perd le focus (<strong>onBlur</strong>) 
+le texte ... s'affiche dans le champ <strong>status</strong>.</p>
+<p>Lorsque l'utilisateur relâche une touche du clavier (<strong>onKeyUp</strong>) 
+le nombre de caractères tapés est mis à jour.</p>
+<p>Lorsqu'on effectue un changement dans le champ de texte np et que l'on quitte 
+ce champ (<strong>onChange</strong>) son contenu est transformé en majuscules.</p>
+
+</body>
+
+</html>
